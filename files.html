@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LocalDrop | My Files</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            <span>
+                Local<span>Drop</span>
+            </span>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="transfer.html">
+                Transfer
+            </a>
+
+            <a href="files.html" class="active">
+                My Files
+            </a>
+
+            <a href="history.html">
+                History
+            </a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="files-page">
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="page-header">
+
+            <div class="badge">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                File Manager
+
+            </div>
+
+
+            <h1>
+                My Files
+            </h1>
+
+
+            <p>
+                Manage the photos, videos and files
+                transferred to your device.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= STORAGE ================= -->
+
+        <section class="storage-card">
+
+
+            <div class="storage-icon">
+
+                <i class="fa-solid fa-hard-drive"></i>
+
+            </div>
+
+
+            <div class="storage-information">
+
+                <div class="storage-heading">
+
+                    <div>
+
+                        <span>
+                            STORAGE
+                        </span>
+
+                        <h3>
+                            4.8 GB
+                            <small>
+                                used
+                            </small>
+                        </h3>
+
+                    </div>
+
+
+                    <strong>
+                        32 GB
+                    </strong>
+
+                </div>
+
+
+                <div class="storage-bar">
+
+                    <div
+                        class="storage-fill"
+                        style="width: 15%;"
+                    ></div>
+
+                </div>
+
+
+                <p>
+                    27.2 GB available
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FILE CONTROLS ================= -->
+
+        <section class="file-controls">
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="fileSearch"
+                    placeholder="Search files..."
+                >
+
+            </div>
+
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="image"
+                >
+                    Photos
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="video"
+                >
+                    Videos
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="document"
+                >
+                    Documents
+                </button>
+
+            </div>
+
+
+            <a
+                href="transfer.html"
+                class="btn primary-btn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Files
+
+            </a>
+
+        </section>
+
+
+
+        <!-- ================= FILES ================= -->
+
+        <section class="files-section">
+
+
+            <div class="files-heading">
+
+                <div>
+
+                    <span>
+                        YOUR FILES
+                    </span>
+
+                    <h2>
+                        Recent Files
+                    </h2>
+
+                </div>
+
+
+                <span class="file-count">
+                    8 Files
+                </span>
+
+            </div>
+
+
+
+            <!-- FILE GRID -->
+
+            <div class="file-grid" id="fileGrid">
+
+
+                <!-- PHOTO -->
+
+                <div
+                    class="file-card"
+                    data-type="image"
+                    data-name="mountain.jpg"
+                >
+
+                    <div class="file-preview image-preview">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        <span class="file-type">
+                            JPG
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            mountain.jpg
+                        </h3>
+
+                        <p>
+                            4.2 MB • Today
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VIDEO -->
+
+                <div
+                    class="file-card"
+                    data-type="video"
+                    data-name="holiday-video.mp4"
+                >
+
+                    <div class="file-preview video-preview">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span class="file-type">
+                            MP4
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            holiday-video.mp4
+                        </h3>
+
+                        <p>
+                            185 MB • Today
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO -->
+
+                <div
+                    class="file-card"
+                    data-type="image"
+                    data-name="profile.jpg"
+                >
+
+                    <div class="file-preview image-preview">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        <span class="file-type">
+                            JPG
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            profile.jpg
+                        </h3>
+
+                        <p>
+                            2.8 MB • Yesterday
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VIDEO -->
+
+                <div
+                    class="file-card"
+                    data-type="video"
+                    data-name="music-video.mp4"
+                >
+
+                    <div class="file-preview video-preview">
+
+                        <i class="fa-solid fa-film"></i>
+
+                        <span class="file-type">
+                            MP4
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            music-video.mp4
+                        </h3>
+
+                        <p>
+                            420 MB • Yesterday
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DOCUMENT -->
+
+                <div
+                    class="file-card"
+                    data-type="document"
+                    data-name="project-report.pdf"
+                >
+
+                    <div class="file-preview document-preview">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        <span class="file-type">
+                            PDF
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            project-report.pdf
+                        </h3>
+
+                        <p>
+                            1.6 MB • 2 days ago
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO -->
+
+                <div
+                    class="file-card"
+                    data-type="image"
+                    data-name="sunset.png"
+                >
+
+                    <div class="file-preview image-preview">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        <span class="file-type">
+                            PNG
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            sunset.png
+                        </h3>
+
+                        <p>
+                            6.3 MB • 3 days ago
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DOCUMENT -->
+
+                <div
+                    class="file-card"
+                    data-type="document"
+                    data-name="assignment.docx"
+                >
+
+                    <div class="file-preview document-preview">
+
+                        <i class="fa-solid fa-file-word"></i>
+
+                        <span class="file-type">
+                            DOCX
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            assignment.docx
+                        </h3>
+
+                        <p>
+                            850 KB • 4 days ago
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VIDEO -->
+
+                <div
+                    class="file-card"
+                    data-type="video"
+                    data-name="vacation.mp4"
+                >
+
+                    <div class="file-preview video-preview">
+
+                        <i class="fa-solid fa-video"></i>
+
+                        <span class="file-type">
+                            MP4
+                        </span>
+
+                    </div>
+
+
+                    <div class="file-information">
+
+                        <h3>
+                            vacation.mp4
+                        </h3>
+
+                        <p>
+                            890 MB • 5 days ago
+                        </p>
+
+                    </div>
+
+
+                    <div class="file-actions">
+
+                        <button title="Download">
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </button>
+
+                        <button title="Delete">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- EMPTY SEARCH RESULT -->
+
+            <div
+                class="empty-files"
+                id="emptyFiles"
+            >
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h3>
+                    No files found
+                </h3>
+
+                <p>
+                    Try searching for a different file.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= INFO ================= -->
+
+        <section class="files-info">
+
+            <div>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Your files stay local
+                </h3>
+
+                <p>
+                    Files transferred through LocalDrop
+                    are stored locally on your device.
+                    They aren't uploaded to a cloud service.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <span>
+                    Local<span>Drop</span>
+                </span>
+
+            </div>
+
+
+            <p>
+                Fast and simple local file sharing.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="transfer.html">
+                    Transfer
+                </a>
+
+                <a href="files.html">
+                    My Files
+                </a>
+
+                <a href="history.html">
+                    History
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 LocalDrop. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/files.js"></script>
+
+</body>
+
+</html>
