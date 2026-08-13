@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LocalDrop | Transfer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-share-nodes"></i>
+
+            <span>
+                Local<span>Drop</span>
+            </span>
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="transfer.html" class="active">
+                Transfer
+            </a>
+
+            <a href="files.html">
+                My Files
+            </a>
+
+            <a href="history.html">
+                History
+            </a>
+
+        </nav>
+
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="transfer-page">
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div class="badge">
+
+                <i class="fa-solid fa-wifi"></i>
+
+                Local Network
+
+            </div>
+
+            <h1>
+                Transfer Files
+            </h1>
+
+            <p>
+                Send photos, videos and other files between
+                your connected devices.
+            </p>
+
+        </section>
+
+
+        <!-- ================= CONNECTION STATUS ================= -->
+
+        <section class="connection-status">
+
+            <div class="status-icon">
+
+                <i class="fa-solid fa-link"></i>
+
+            </div>
+
+
+            <div class="status-information">
+
+                <span>
+                    CONNECTION STATUS
+                </span>
+
+                <h3>
+                    Device Connected
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-circle"></i>
+
+                    Your device is ready for transfer
+                </p>
+
+            </div>
+
+
+            <div class="connected-device">
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <div>
+
+                    <strong>
+                        Android Phone
+                    </strong>
+
+                    <small>
+                        Connected
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRANSFER AREA ================= -->
+
+        <section class="transfer-container">
+
+
+            <!-- SEND FILES -->
+
+            <div class="transfer-card">
+
+                <div class="transfer-card-icon send-icon">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+
+                <h2>
+                    Send Files
+                </h2>
+
+
+                <p>
+                    Select photos, videos or other files
+                    from this device and send them to
+                    your connected device.
+                </p>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    multiple
+                    hidden
+                >
+
+
+                <label
+                    for="fileInput"
+                    class="file-select"
+                >
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>
+                        Choose Files
+                    </span>
+
+                    <small>
+                        Photos, videos and documents
+                    </small>
+
+                </label>
+
+
+                <!-- SELECTED FILES -->
+
+                <div
+                    class="selected-files"
+                    id="selectedFiles"
+                >
+
+                    <!-- JavaScript will add files here -->
+
+                </div>
+
+
+                <button
+                    class="btn primary-btn transfer-btn"
+                    id="sendBtn"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Files
+
+                </button>
+
+            </div>
+
+
+            <!-- DIVIDER -->
+
+            <div class="transfer-divider">
+
+                <span>
+                    OR
+                </span>
+
+            </div>
+
+
+            <!-- RECEIVE FILES -->
+
+            <div class="transfer-card receive-card">
+
+                <div class="transfer-card-icon receive-icon">
+
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+
+                </div>
+
+
+                <h2>
+                    Receive Files
+                </h2>
+
+
+                <p>
+                    Receive photos, videos and files
+                    from your connected device.
+                </p>
+
+
+                <div class="receive-area">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <h3>
+                        Ready to Receive
+                    </h3>
+
+                    <p>
+                        Files sent from the connected
+                        device will appear here.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="btn secondary-btn"
+                    id="receiveBtn"
+                >
+
+                    <i class="fa-solid fa-inbox"></i>
+
+                    Open Received Files
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRANSFER PROGRESS ================= -->
+
+        <section
+            class="transfer-progress"
+            id="transferProgress"
+        >
+
+            <div class="progress-header">
+
+                <div>
+
+                    <span>
+                        TRANSFERRING
+                    </span>
+
+                    <h3 id="transferFileName">
+                        video.mp4
+                    </h3>
+
+                </div>
+
+
+                <strong id="progressPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+
+            <div class="progress-details">
+
+                <span id="transferStatus">
+                    Preparing transfer...
+                </span>
+
+                <span id="transferSize">
+                    0 MB / 0 MB
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRANSFER TIPS ================= -->
+
+        <section class="transfer-tips">
+
+            <div class="tip">
+
+                <i class="fa-solid fa-wifi"></i>
+
+                <div>
+
+                    <h3>
+                        Stay Connected
+                    </h3>
+
+                    <p>
+                        Keep both devices connected to
+                        the same Wi-Fi network during transfer.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tip">
+
+                <i class="fa-solid fa-mobile-screen"></i>
+
+                <div>
+
+                    <h3>
+                        Keep Your Screen Active
+                    </h3>
+
+                    <p>
+                        Avoid closing the browser while
+                        a transfer is in progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tip">
+
+                <i class="fa-solid fa-database"></i>
+
+                <div>
+
+                    <h3>
+                        No Data Bundles
+                    </h3>
+
+                    <p>
+                        LocalDrop transfers files directly
+                        over your local network.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <span>
+                    Local<span>Drop</span>
+                </span>
+
+            </div>
+
+            <p>
+                Fast and simple local file sharing.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="transfer.html">
+                    Transfer
+                </a>
+
+                <a href="files.html">
+                    My Files
+                </a>
+
+                <a href="history.html">
+                    History
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 LocalDrop. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/transfer.js"></script>
+
+</body>
+
+</html>
