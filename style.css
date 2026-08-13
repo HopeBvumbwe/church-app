@@ -2446,3 +2446,41 @@ body.dark-mode .filter-btn {
 .no-scroll {
     overflow: hidden;
 }
+/* ================= SOCIAL MEDIA ================= */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    color: var(--muted);
+    background: var(--white);
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+}
