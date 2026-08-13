@@ -7,12 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Manage your Thamanda-LocalDrop application settings.">
+    <title>LocalDrop | Settings</title>
 
-    <title>Thamanda-LocalDrop | Settings</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -32,7 +29,7 @@
             <i class="fa-solid fa-share-nodes"></i>
 
             <span>
-                Thamanda<span>LocalDrop</span>
+                Local<span>Drop</span>
             </span>
 
         </div>
@@ -56,7 +53,7 @@
                 History
             </a>
 
-            <a href="setting.html" class="active">
+            <a href="settings.html" class="active">
                 Settings
             </a>
 
@@ -97,188 +94,31 @@
 
 
             <p>
-                Customize your Thamanda-LocalDrop experience.
+                Manage your LocalDrop preferences,
+                connection and transfer settings.
             </p>
 
         </section>
 
 
 
-        <!-- ================= SETTINGS CONTAINER ================= -->
+        <!-- ================= SETTINGS LAYOUT ================= -->
 
         <section class="settings-container">
 
 
-            <!-- ================= GENERAL SETTINGS ================= -->
-
-            <div class="settings-card">
-
-                <div class="settings-card-header">
-
-                    <div class="settings-icon">
-
-                        <i class="fa-solid fa-sliders"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h2>
-                            General Settings
-                        </h2>
-
-                        <p>
-                            Manage general application preferences.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Notifications -->
-
-                <div class="setting-item">
-
-                    <div class="setting-information">
-
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-bell"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Notifications
-                            </h3>
-
-                            <p>
-                                Receive notifications when file
-                                transfers are completed.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <label class="switch">
-
-                        <input
-                            type="checkbox"
-                            id="notifications"
-                            checked
-                        >
-
-                        <span class="slider"></span>
-
-                    </label>
-
-                </div>
-
-
-                <!-- Auto Download -->
-
-                <div class="setting-item">
-
-                    <div class="setting-information">
-
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-download"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Automatic Downloads
-                            </h3>
-
-                            <p>
-                                Automatically save received files
-                                to your downloads folder.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <label class="switch">
-
-                        <input
-                            type="checkbox"
-                            id="autoDownload"
-                            checked
-                        >
-
-                        <span class="slider"></span>
-
-                    </label>
-
-                </div>
-
-
-                <!-- Confirm Transfer -->
-
-                <div class="setting-item">
-
-                    <div class="setting-information">
-
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-circle-question"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Confirm Transfers
-                            </h3>
-
-                            <p>
-                                Ask for confirmation before starting
-                                a file transfer.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <label class="switch">
-
-                        <input
-                            type="checkbox"
-                            id="confirmTransfer"
-                            checked
-                        >
-
-                        <span class="slider"></span>
-
-                    </label>
-
-                </div>
-
-            </div>
-
-
-
             <!-- ================= APPEARANCE ================= -->
 
-            <div class="settings-card">
+            <div class="settings-section">
 
-                <div class="settings-card-header">
+                <div class="settings-section-header">
 
-                    <div class="settings-icon">
+                    <div class="settings-section-icon">
 
                         <i class="fa-solid fa-palette"></i>
 
                     </div>
+
 
                     <div>
 
@@ -295,26 +135,22 @@
                 </div>
 
 
-                <!-- Theme -->
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-moon"></i>
-
-                        </div>
+                        <i class="fa-solid fa-moon"></i>
 
                         <div>
 
                             <h3>
-                                Theme
+                                Dark Mode
                             </h3>
 
                             <p>
-                                Choose the appearance of the application.
+                                Use a darker interface that is
+                                easier on the eyes.
                             </p>
 
                         </div>
@@ -322,45 +158,36 @@
                     </div>
 
 
-                    <select id="theme">
+                    <label class="switch">
 
-                        <option value="light">
-                            Light
-                        </option>
+                        <input
+                            type="checkbox"
+                            id="darkMode"
+                            checked
+                        >
 
-                        <option value="dark">
-                            Dark
-                        </option>
+                        <span class="slider"></span>
 
-                        <option value="system">
-                            System
-                        </option>
-
-                    </select>
+                    </label>
 
                 </div>
 
 
-                <!-- Text Size -->
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-text-height"></i>
-
-                        </div>
+                        <i class="fa-solid fa-language"></i>
 
                         <div>
 
                             <h3>
-                                Text Size
+                                Language
                             </h3>
 
                             <p>
-                                Adjust the text size across the application.
+                                Select the language used by LocalDrop.
                             </p>
 
                         </div>
@@ -368,18 +195,14 @@
                     </div>
 
 
-                    <select id="textSize">
+                    <select id="language">
 
-                        <option value="small">
-                            Small
+                        <option value="english">
+                            English
                         </option>
 
-                        <option value="medium" selected>
-                            Medium
-                        </option>
-
-                        <option value="large">
-                            Large
+                        <option value="chichewa">
+                            Chichewa
                         </option>
 
                     </select>
@@ -390,26 +213,27 @@
 
 
 
-            <!-- ================= TRANSFER SETTINGS ================= -->
+            <!-- ================= TRANSFER ================= -->
 
-            <div class="settings-card">
+            <div class="settings-section">
 
-                <div class="settings-card-header">
+                <div class="settings-section-header">
 
-                    <div class="settings-icon">
+                    <div class="settings-section-icon">
 
-                        <i class="fa-solid fa-file-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
 
                     </div>
+
 
                     <div>
 
                         <h2>
-                            Transfer Settings
+                            Transfer
                         </h2>
 
                         <p>
-                            Configure how files are transferred.
+                            Configure your file transfer preferences.
                         </p>
 
                     </div>
@@ -417,27 +241,21 @@
                 </div>
 
 
-                <!-- Transfer Mode -->
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-wifi"></i>
-
-                        </div>
+                        <i class="fa-solid fa-folder"></i>
 
                         <div>
 
                             <h3>
-                                Transfer Network
+                                Default Download Folder
                             </h3>
 
                             <p>
-                                Files are transferred through your
-                                local network.
+                                Choose where received files are stored.
                             </p>
 
                         </div>
@@ -445,33 +263,36 @@
                     </div>
 
 
-                    <span class="setting-value">
-                        Local Wi-Fi
-                    </span>
+                    <button
+                        class="setting-button"
+                        id="folderButton"
+                    >
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                        Choose
+
+                    </button>
 
                 </div>
 
 
-                <!-- File Limit -->
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-file"></i>
-
-                        </div>
+                        <i class="fa-solid fa-file"></i>
 
                         <div>
 
                             <h3>
-                                Maximum File Size
+                                Ask Before Receiving
                             </h3>
 
                             <p>
-                                Maximum size allowed for a single transfer.
+                                Ask for confirmation before
+                                saving received files.
                             </p>
 
                         </div>
@@ -479,40 +300,208 @@
                     </div>
 
 
-                    <select id="fileSize">
+                    <label class="switch">
 
-                        <option value="500">
-                            500 MB
-                        </option>
+                        <input
+                            type="checkbox"
+                            id="confirmReceive"
+                            checked
+                        >
 
-                        <option value="1000" selected>
-                            1 GB
-                        </option>
+                        <span class="slider"></span>
 
-                        <option value="2000">
-                            2 GB
-                        </option>
-
-                        <option value="5000">
-                            5 GB
-                        </option>
-
-                    </select>
+                    </label>
 
                 </div>
 
 
-                <!-- Transfer History -->
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
+                        <i class="fa-solid fa-play"></i>
 
-                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        <div>
+
+                            <h3>
+                                Auto Start Transfers
+                            </h3>
+
+                            <p>
+                                Start transfers automatically
+                                when files are selected.
+                            </p>
 
                         </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="autoTransfer"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CONNECTION ================= -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+
+                    <div class="settings-section-icon">
+
+                        <i class="fa-solid fa-wifi"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Connection
+                        </h2>
+
+                        <p>
+                            Manage your local network connection.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="connection-setting">
+
+                    <div class="connection-device-icon">
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                    </div>
+
+
+                    <div class="connection-device-information">
+
+                        <span>
+                            CONNECTED DEVICE
+                        </span>
+
+                        <h3>
+                            Windows PC
+                        </h3>
+
+                        <p>
+
+                            <i class="fa-solid fa-circle"></i>
+
+                            Connected
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="disconnect-button"
+                        id="disconnectButton"
+                    >
+
+                        <i class="fa-solid fa-link-slash"></i>
+
+                        Disconnect
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="setting-item">
+
+                    <div class="setting-information">
+
+                        <i class="fa-solid fa-qrcode"></i>
+
+                        <div>
+
+                            <h3>
+                                Device Pairing
+                            </h3>
+
+                            <p>
+                                Generate a QR code to connect
+                                another device.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="setting-button"
+                        id="pairButton"
+                    >
+
+                        <i class="fa-solid fa-qrcode"></i>
+
+                        Pair Device
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PRIVACY ================= -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+
+                    <div class="settings-section-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Privacy & Security
+                        </h2>
+
+                        <p>
+                            Control how LocalDrop handles your data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="setting-item">
+
+                    <div class="setting-information">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
 
                         <div>
 
@@ -521,7 +510,8 @@
                             </h3>
 
                             <p>
-                                Keep a record of completed and failed transfers.
+                                Keep a record of completed
+                                and failed transfers.
                             </p>
 
                         </div>
@@ -543,78 +533,61 @@
 
                 </div>
 
-            </div>
-
-
-
-            <!-- ================= PRIVACY ================= -->
-
-            <div class="settings-card">
-
-                <div class="settings-card-header">
-
-                    <div class="settings-icon">
-
-                        <i class="fa-solid fa-shield-halved"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h2>
-                            Privacy & Security
-                        </h2>
-
-                        <p>
-                            Control how LocalDrop handles your files.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="privacy-message">
-
-                    <i class="fa-solid fa-lock"></i>
-
-                    <div>
-
-                        <h3>
-                            Your files stay local
-                        </h3>
-
-                        <p>
-                            LocalDrop is designed to transfer files
-                            directly between devices on the local
-                            network. Your files do not need to be
-                            uploaded to a cloud service.
-                        </p>
-
-                    </div>
-
-                </div>
 
 
                 <div class="setting-item">
 
                     <div class="setting-information">
 
-                        <div class="setting-item-icon">
-
-                            <i class="fa-solid fa-trash-can"></i>
-
-                        </div>
+                        <i class="fa-solid fa-user-shield"></i>
 
                         <div>
 
                             <h3>
-                                Clear Local Data
+                                Require Device Approval
                             </h3>
 
                             <p>
-                                Remove saved settings and local
-                                application information.
+                                Require permission before
+                                another device connects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="deviceApproval"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+
+                <div class="setting-item danger-setting">
+
+                    <div class="setting-information">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        <div>
+
+                            <h3>
+                                Clear Transfer History
+                            </h3>
+
+                            <p>
+                                Permanently remove your
+                                local transfer records.
                             </p>
 
                         </div>
@@ -623,11 +596,11 @@
 
 
                     <button
-                        class="danger-btn"
-                        id="clearDataBtn"
+                        class="danger-button"
+                        id="clearHistory"
                     >
 
-                        Clear Data
+                        Clear History
 
                     </button>
 
@@ -637,51 +610,185 @@
 
 
 
-            <!-- ================= ACTIONS ================= -->
+            <!-- ================= STORAGE ================= -->
 
-            <div class="settings-actions">
+            <div class="settings-section">
 
-                <button
-                    class="btn secondary-btn"
-                    id="resetSettings"
-                >
+                <div class="settings-section-header">
 
-                    <i class="fa-solid fa-rotate-left"></i>
+                    <div class="settings-section-icon">
 
-                    Reset Settings
+                        <i class="fa-solid fa-hard-drive"></i>
 
-                </button>
+                    </div>
 
 
-                <button
-                    class="btn primary-btn"
-                    id="saveSettings"
-                >
+                    <div>
 
-                    <i class="fa-solid fa-check"></i>
+                        <h2>
+                            Storage
+                        </h2>
 
-                    Save Settings
+                        <p>
+                            Manage LocalDrop storage.
+                        </p>
 
-                </button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="storage-setting">
+
+                    <div class="storage-top">
+
+                        <span>
+                            LocalDrop Storage
+                        </span>
+
+                        <strong>
+                            4.8 GB / 32 GB
+                        </strong>
+
+                    </div>
+
+
+                    <div class="storage-bar">
+
+                        <div
+                            class="storage-fill"
+                            style="width: 15%;"
+                        ></div>
+
+                    </div>
+
+
+                    <p>
+                        27.2 GB available
+                    </p>
+
+                </div>
+
+
+
+                <div class="setting-item">
+
+                    <div class="setting-information">
+
+                        <i class="fa-solid fa-broom"></i>
+
+                        <div>
+
+                            <h3>
+                                Clear Temporary Files
+                            </h3>
+
+                            <p>
+                                Remove temporary files created
+                                during transfers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="setting-button"
+                        id="clearTemp"
+                    >
+
+                        Clear
+
+                    </button>
+
+                </div>
 
             </div>
 
 
-            <!-- SUCCESS MESSAGE -->
 
-            <div
-                class="settings-message"
-                id="settingsMessage"
-            >
+            <!-- ================= ABOUT ================= -->
 
-                <i class="fa-solid fa-circle-check"></i>
+            <div class="settings-section about-section">
 
-                Settings saved successfully.
+                <div class="settings-section-header">
+
+                    <div class="settings-section-icon">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            About LocalDrop
+                        </h2>
+
+                        <p>
+                            Application information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-information">
+
+                    <div class="about-logo">
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            LocalDrop
+                        </h2>
+
+                        <p>
+                            Local file transfer application
+                        </p>
+
+                        <span>
+                            Version 1.0.0
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-links">
+
+                    <a href="#">
+                        <i class="fa-solid fa-circle-question"></i>
+                        Help & Support
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-code"></i>
+                        Project Information
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-file-contract"></i>
+                        Privacy Policy
+                    </a>
+
+                </div>
 
             </div>
 
 
         </section>
+
 
     </main>
 
@@ -699,7 +806,7 @@
                 <i class="fa-solid fa-share-nodes"></i>
 
                 <span>
-                    Thamanda<span>LocalDrop</span>
+                    Local<span>Drop</span>
                 </span>
 
             </div>
@@ -728,26 +835,11 @@
                     History
                 </a>
 
-                <a href="setting.html">
+                <a href="settings.html">
                     Settings
                 </a>
 
             </div>
-            <div class="social-links">
-
-    <a href="https://web.facebook.com/profile.php?id=61587791271068" aria-label="Facebook" title="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-    </a>
-
-    <a href="http://www.youtube.com/@ThamandaZECMedia" aria-label="YouTube" title="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-    </a>
-
-    <a href="https://www.tiktok.com/@thamandazambezi?is_from_webapp=1&sender_device=pc" aria-label="TikTok" title="TikTok">
-        <i class="fa-brands fa-tiktok"></i>
-    </a>
-
-</div>
 
         </div>
 
@@ -755,7 +847,7 @@
         <div class="copyright">
 
             <p>
-                &copy; 2026 Thamanda-LocalDrop. All rights reserved.
+                &copy; 2026 LocalDrop. All rights reserved.
             </p>
 
         </div>
@@ -764,7 +856,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="js/settings.js"></script>
 
 </body>
 
